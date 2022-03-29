@@ -53,7 +53,7 @@ Use the `create-network` command as shown in the following example\. Consider th
 
 ```
 [ec2-user@ip-192-0-2-17 ~]$ aws managedblockchain create-network \
---cli-input-json '{\"Name\":\"OurBlockchainNet\", \"Description\":\"OurBlockchainNetDesc\", \"Framework\":\"HYPERLEDGER_FABRIC\",\"FrameworkVersion\": \"2.2\", \"FrameworkConfiguration\": {\"Fabric\": {\"Edition\": \"STARTER\"}}, \"VotingPolicy\": {\"ApprovalThresholdPolicy\": {\"ThresholdPercentage\": 50, \"ProposalDurationInHours\": 24, \"ThresholdComparator\": \"GREATER_THAN\"}}, “MemberConfiguration”: {\"Name\":\"org1\", \"Description\":\"Org1 first member of network\", \"FrameworkConfiguration\":{\"Fabric\":\n{\"AdminUsername\":\"MyAdminUser\",\"AdminPassword\":\"Password123\"}}, \"LogPublishingConfiguration\": {\"Fabric\":{\"CaLogs\":{\"Cloudwatch\": {\"Enabled\": true}}}}}}'
+--cli-input-json '{\"Name\":\"OurBlockchainNet\", \"Description\":\"OurBlockchainNetDesc\", \"Framework\":\"HYPERLEDGER_FABRIC\",\"FrameworkVersion\": \"2.2\", \"FrameworkConfiguration\": {\"Fabric\": {\"Edition\": \"STARTER\"}}, \"VotingPolicy\": {\"ApprovalThresholdPolicy\": {\"ThresholdPercentage\": 50, \"ProposalDurationInHours\": 24, \"ThresholdComparator\": \"GREATER_THAN\"}}, "MemberConfiguration": {\"Name\":\"org1\", \"Description\":\"Org1 first member of network\", \"FrameworkConfiguration\":{\"Fabric\":\{\"AdminUsername\":\"MyAdminUser\",\"AdminPassword\":\"Password123\"}}, \"LogPublishingConfiguration\": {\"Fabric\":{\"CaLogs\":{\"Cloudwatch\": {\"Enabled\": true}}}}}}'
 ```
 
 The command returns the Network ID and the Member ID, as shown in the following example:
